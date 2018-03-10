@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Light Theme-->
+    <style name="AppTheme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowActionBar" tools:ignore="NewApi">false</item>
+        <item name="android:windowActionModeOverlay" tools:ignore="NewApi">true</item>
+        <item name="android:windowCloseOnTouchOutside" tools:ignore="NewApi">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:listChoiceIndicatorSingle">@drawable/abc_btn_radio_material</item>
+        <item name="android:listChoiceIndicatorMultiple">@drawable/abc_btn_check_material</item>
+        <item name="android:colorAccent" tools:targetApi="lollipop">?colorAccent</item>
+        <item name="android:colorPrimary" tools:targetApi="lollipop">?colorPrimary</item>
+        <item name="pdlButtonBackground">@drawable/dl_button</item>
+        <item name="pdlListSelector">@drawable/dl_list</item>
+        <!-- Light theme specific: -->
+        <item name="pdlTextPrimaryColor">@color/pdl_text_primary_light</item>
+        <item name="pdlTextSecondaryColor">@color/pdl_text_secondary_light</item>
+        <item name="pdlDividerColor">@color/pdl_divider_light</item>
+        <item name="pdlPressedColor">@color/pdl_pressed_light</item>
+        <item name="android:windowBackground">@drawable/dl_background</item>
+    </style>
+
+    <style name="AppTheme.Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AppTheme.Layout.Content">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="AppTheme.Layout.Custom">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.Layout.Buttons">
+        <item name="android:layout_height">@dimen/grid_12</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingLeft">@dimen/grid_2</item>
+        <item name="android:paddingRight">@dimen/grid_2</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="AppTheme.Layout.Buttons.Right">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="AppTheme.Layout.Buttons.Stacked">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="AppTheme.ScrollView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="AppTheme.TextView" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.TextView.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">?attr/pdlTextPrimaryColor</item>
+        <!-- paddings set in code -->
+    </style>
+
+    <style name="AppTheme.TextView.Message">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/pdl_text_secondary_light</item>
+        <!-- paddings set in code -->
+    </style>
+
+    <style name="AppTheme.TextView.ListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/grid_13</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?attr/pdlTextPrimaryColor</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/grid_6</item>
+        <item name="android:paddingRight">@dimen/grid_6</item>
+    </style>
+
+    <style name="AppTheme.TextView.MultiChoice">
+        <item name="android:minHeight">@dimen/grid_13</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?attr/pdlTextPrimaryColor</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">@dimen/grid_6</item>
+    </style>
+
+    <style name="AppTheme.ListItemControl">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:clickable">false</item>
+        <item name="android:minHeight">@dimen/grid_13</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/grid_6</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="AppTheme.ListItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:paddingLeft">@dimen/grid_6</item>
+        <item name="android:paddingRight">@dimen/grid_6</item>
+    </style>
+
+    <style name="AppTheme.Button.Dialog">
+        <item name="android:background">?attr/pdlButtonBackground</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">@dimen/grid_16</item>
+        <item name="android:layout_height">@dimen/grid_9</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingRight">@dimen/grid_2</item>
+        <item name="android:paddingLeft">@dimen/grid_2</item>
+        <item name="android:layout_marginRight">@dimen/grid_1</item>
+        <item name="android:layout_marginLeft">@dimen/grid_1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps" tools:ignore="NewApi">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Button.Neutral" parent="@style/AppTheme.Button.Dialog">
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="AppTheme.Button.Dialog.Stacked">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/grid_12</item>
+        <item name="android:gravity">center_vertical|end</item>
+        <item name="android:paddingRight">@dimen/grid_8</item>
+        <item name="android:paddingLeft">@dimen/grid_8</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:layout_marginLeft">0dp</item>
+    </style>
+
+
+    <style name="AppTheme.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">@dimen/grid_16</item>
+        <item name="android:layout_height">@dimen/grid_9</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center_vertical|end</item>
+        <item name="android:paddingRight">@dimen/grid_2</item>
+        <item name="android:paddingLeft">@dimen/grid_2</item>
+        <item name="android:layout_marginRight">@dimen/grid_1</item>
+        <item name="android:layout_marginLeft">@dimen/grid_1</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps" tools:ignore="NewApi">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?attr/pdlDividerColor</item>
+    </style>
+
+    <style name="AppTheme.ListView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:listSelector">?attr/pdlListSelector</item>
+    </style>
+
+    <style name="ProgressDialogPrimary" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

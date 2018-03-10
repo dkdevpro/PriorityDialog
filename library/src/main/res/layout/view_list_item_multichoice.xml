@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.dino.lib.dialog.util.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/AppTheme.ListItem">
+
+    <CheckBox style="@style/AppTheme.ListItemControl" />
+
+    <TextView
+        android:id="@+id/sdl_text"
+        android:fontFamily="sans-serif"
+        style="@style/AppTheme.TextView.MultiChoice"
+        tools:text="Item" />
+
+</com.dino.lib.dialog.util.CheckableLinearLayout>

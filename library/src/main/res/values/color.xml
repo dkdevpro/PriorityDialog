@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="colorPrimary">#484D5B</color>
+  <color name="colorPrimaryDark">#343645</color>
+  <color name="colorAccent">#79bd9a</color>
+  <color name="pdl_background_light">#ffeeeeee</color>
+  <color name="pdl_text_secondary_light">#8a000000</color>
+  <color name="color_white">#FFFFFF</color>
+  <color name="pdl_text_primary_light">#de000000</color>
+  <color name="pdl_divider_light">#1F000000</color>
+  <color name="pdl_pressed_light">#29000000</color>
+</resources>

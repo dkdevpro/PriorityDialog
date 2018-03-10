@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PantepicDialogs">
+        <attr name="pdlTextPrimaryColor" format="color|reference" />
+        <attr name="pdlTextSecondaryColor" format="color|reference" />
+        <attr name="pdlDividerColor" format="color|reference" />
+        <attr name="pdlPressedColor" format="color|reference" />
+        <attr name="pdlButtonBackground" format="reference" />
+        <attr name="pdlListSelector" format="reference" />
+    </declare-styleable>
+</resources>
