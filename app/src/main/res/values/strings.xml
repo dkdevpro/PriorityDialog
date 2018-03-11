@@ -1,3 +1,7 @@
 <resources>
   <string name="app_name">PriorityDialog</string>
+  <string name="title">Title</string>
+  <string name="sd_message">Hey I\'ve priority</string>
+  <string name="yes">Yes</string>
+  <string name="cancel">Cancel</string>
 </resources>

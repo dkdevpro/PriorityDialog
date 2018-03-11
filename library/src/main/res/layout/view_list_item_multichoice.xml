@@ -8,7 +8,7 @@
     <CheckBox style="@style/AppTheme.ListItemControl" />
 
     <TextView
-        android:id="@+id/sdl_text"
+        android:id="@+id/pdl_text"
         android:fontFamily="sans-serif"
         style="@style/AppTheme.TextView.MultiChoice"
         tools:text="Item" />

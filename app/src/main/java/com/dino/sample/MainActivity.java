@@ -15,23 +15,14 @@ public class MainActivity extends AppCompatActivity {
     setContentView(R.layout.activity_main);
 
     PriorityDialogManager.getNewInstance()
-        .showDialog(PriorityDialog.createBuilder(this, getSupportFragmentManager())
-            .setTitle("Title")
-            .setMessage("Simple Priority Dialog")
-            .setPositiveButton("OK",
-                new View.OnClickListener() {
-                  @Override
-                  public void onClick(View view) {
-                    Toast.makeText(MainActivity.this, "Simple priority dialog", Toast.LENGTH_SHORT).show();
-                  }
-                })
-            .setNegativeButton("Cancel",
-                new View.OnClickListener() {
-                  @Override
-                  public void onClick(View view) {
-                    finish();
-                  }
-                }));
+        .showDialog(
+            PriorityDialog.createBuilder(this, getSupportFragmentManager())
+            .setTitle(getString(R.string.title))
+            .setPriority(3)
+            .setMessage(getString(R.string.sd_message))
+            .setPositiveButton(getString(R.string.yes),null)
+            .setNegativeButton(getString(R.string.cancel),null)
+        );
 
   }
 }

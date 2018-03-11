@@ -71,7 +71,7 @@ public class PriorityDatePickerDialog extends BaseDialogFragment {
                 }
             });
         }
-        //mDatePicker = (DatePicker) builder.getLayoutInflater().inflate(R.layout.sdl_datepicker, null);
+        //mDatePicker = (DatePicker) builder.getLayoutInflater().inflate(R.layout.pdl_datepicker, null);
         builder.setView(mDatePicker);
 
         TimeZone zone = TimeZone.getTimeZone(getArguments().getString(ARG_ZONE));

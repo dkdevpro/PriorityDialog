@@ -98,9 +98,9 @@ public abstract class BaseDialogFragment extends DialogFragment implements Dialo
     @Override
     public void onShow(DialogInterface dialog) {
         if (getView() != null) {
-            ScrollView vMessageScrollView = (ScrollView) getView().findViewById(R.id.sdl_message_scrollview);
-            ListView vListView = (ListView) getView().findViewById(R.id.sdl_list);
-            FrameLayout vCustomViewNoScrollView = (FrameLayout) getView().findViewById(R.id.sdl_custom);
+            ScrollView vMessageScrollView = (ScrollView) getView().findViewById(R.id.pdl_message_scrollview);
+            ListView vListView = (ListView) getView().findViewById(R.id.pdl_list);
+            FrameLayout vCustomViewNoScrollView = (FrameLayout) getView().findViewById(R.id.pdl_custom);
             boolean customViewNoScrollViewScrollable = false;
             if (vCustomViewNoScrollView.getChildCount() > 0) {
                 View firstChild = vCustomViewNoScrollView.getChildAt(0);
@@ -137,10 +137,10 @@ public abstract class BaseDialogFragment extends DialogFragment implements Dialo
         if (getView() == null) {
             return;
         }
-        View vButtonDivider = getView().findViewById(R.id.sdl_button_divider);
-        View vButtonsBottomSpace = getView().findViewById(R.id.sdl_buttons_bottom_space);
-        View vDefaultButtons = getView().findViewById(R.id.sdl_buttons_default);
-        View vStackedButtons = getView().findViewById(R.id.sdl_buttons_stacked);
+        View vButtonDivider = getView().findViewById(R.id.pdl_button_divider);
+        View vButtonsBottomSpace = getView().findViewById(R.id.pdl_buttons_bottom_space);
+        View vDefaultButtons = getView().findViewById(R.id.pdl_buttons_default);
+        View vStackedButtons = getView().findViewById(R.id.pdl_buttons_stacked);
         if (vDefaultButtons.getVisibility() == View.GONE && vStackedButtons.getVisibility() == View.GONE) {
             // no buttons
             vButtonDivider.setVisibility(View.GONE);
@@ -352,18 +352,18 @@ public abstract class BaseDialogFragment extends DialogFragment implements Dialo
         public View create() {
 
             LinearLayout content = (LinearLayout) mInflater.inflate(R.layout.view_dialog, mContainer, false);
-            TextView vTitle =  content.findViewById(R.id.sdl_title);
-            TextView vMessage =  content.findViewById(R.id.sdl_message);
-            FrameLayout vCustomView =  content.findViewById(R.id.sdl_custom);
-            TextView vPositiveButton =  content.findViewById(R.id.sdl_button_positive);
-            TextView vNegativeButton =  content.findViewById(R.id.sdl_button_negative);
-            TextView vNeutralButton = content.findViewById(R.id.sdl_button_neutral);
-            TextView vPositiveButtonStacked =  content.findViewById(R.id.sdl_button_positive_stacked);
-            TextView vNegativeButtonStacked =  content.findViewById(R.id.sdl_button_negative_stacked);
-            TextView vNeutralButtonStacked =  content.findViewById(R.id.sdl_button_neutral_stacked);
-            View vButtonsDefault = content.findViewById(R.id.sdl_buttons_default);
-            View vButtonsStacked = content.findViewById(R.id.sdl_buttons_stacked);
-            ListView vList =  content.findViewById(R.id.sdl_list);
+            TextView vTitle =  content.findViewById(R.id.pdl_title);
+            TextView vMessage =  content.findViewById(R.id.pdl_message);
+            FrameLayout vCustomView =  content.findViewById(R.id.pdl_custom);
+            TextView vPositiveButton =  content.findViewById(R.id.pdl_button_positive);
+            TextView vNegativeButton =  content.findViewById(R.id.pdl_button_negative);
+            TextView vNeutralButton = content.findViewById(R.id.pdl_button_neutral);
+            TextView vPositiveButtonStacked =  content.findViewById(R.id.pdl_button_positive_stacked);
+            TextView vNegativeButtonStacked =  content.findViewById(R.id.pdl_button_negative_stacked);
+            TextView vNeutralButtonStacked =  content.findViewById(R.id.pdl_button_neutral_stacked);
+            View vButtonsDefault = content.findViewById(R.id.pdl_buttons_default);
+            View vButtonsStacked = content.findViewById(R.id.pdl_buttons_stacked);
+            ListView vList =  content.findViewById(R.id.pdl_list);
 
 
             set(vTitle, mTitle);

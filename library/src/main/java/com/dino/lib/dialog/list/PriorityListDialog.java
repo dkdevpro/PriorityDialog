@@ -78,7 +78,7 @@ public class PriorityListDialog extends BaseDialogFragment {
     private ListAdapter prepareAdapter(final int itemLayoutId) {
         return new ArrayAdapter<Object>(getActivity(),
                 itemLayoutId,
-                R.id.sdl_text,
+                R.id.pdl_text,
                 getItems()) {
 
             /**
@@ -89,7 +89,7 @@ public class PriorityListDialog extends BaseDialogFragment {
                 if (convertView == null) {
                     convertView = LayoutInflater.from(parent.getContext()).inflate(itemLayoutId, parent, false);
                 }
-                TextView t = (TextView)convertView.findViewById(R.id.sdl_text);
+                TextView t = (TextView)convertView.findViewById(R.id.pdl_text);
                 if (t != null) {
                     t.setText((CharSequence)getItem(position));
                 }
@@ -158,7 +158,6 @@ public class PriorityListDialog extends BaseDialogFragment {
             });
         }
 
-        //confirm button makes no sense when CHOICE_MODE_NONE
         if (getMode() != AbsListView.CHOICE_MODE_NONE) {
             View.OnClickListener positiveButtonClickListener = null;
             switch (getMode()) {
@@ -166,7 +165,6 @@ public class PriorityListDialog extends BaseDialogFragment {
                     positiveButtonClickListener = new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            // prepare multiple results
                             final int[] checkedPositions = getCheckedItems();
                             final CharSequence[] items = getItems();
                             final CharSequence[] checkedValues = new CharSequence[checkedPositions.length];
@@ -187,7 +185,6 @@ public class PriorityListDialog extends BaseDialogFragment {
                     positiveButtonClickListener = new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            // prepare single result
                             int selectedPosition = -1;
                             final int[] checkedPositions = getCheckedItems();
                             final CharSequence[] items = getItems();
@@ -200,7 +197,6 @@ public class PriorityListDialog extends BaseDialogFragment {
                             }
 
                             dismiss();
-                            // either item is selected or dialog is cancelled
                             if (selectedPosition != -1) {
                                 if(mListDialogListener != null){
                                     mListDialogListener.onListItemSelected(items[selectedPosition], selectedPosition, mRequestCode);
@@ -329,26 +325,12 @@ public class PriorityListDialog extends BaseDialogFragment {
             return this;
         }
 
-
-        /**
-         * Positions of item that should be pre-selected
-         * Valid for setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE)
-         *
-         * @param positions list of item positions to mark as checked
-         * @return builder
-         */
         public SimpleListDialogBuilder setCheckedItems(int[] positions) {
             this.checkedItems = positions;
             return this;
         }
 
-        /**
-         * Position of item that should be pre-selected
-         * Valid for setChoiceMode(AbsListView.CHOICE_MODE_SINGLE)
-         *
-         * @param position item position to mark as selected
-         * @return builder
-         */
+
         public SimpleListDialogBuilder setSelectedItem(int position) {
             this.checkedItems = new int[]{position};
             return this;
